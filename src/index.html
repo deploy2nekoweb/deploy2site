@@ -38,27 +38,25 @@
     <yescript>
       <div id="code"></div>
     </yescript>
-    <noscript>
-      <pre><code>on: [push]
+    <pre><code id="raw-code">on: [push]
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    name: deploy2nekoweb
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        
-      # your build step here
-        
-      - name: deploy2nekoweb
-        uses: deploy2nekoweb/deploy2nekoweb@v1
-        with:
-          nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
-          nekoweb-cookie: ${{ secrets.NEKOWEB_COOKIE }}
-          nekoweb-folder: 'site'
-          directory: 'public'</code></pre>
-    </noscript>
+      jobs:
+        test:
+          runs-on: ubuntu-latest
+          name: deploy2nekoweb
+          steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+              
+            # your build step here
+              
+            - name: deploy2nekoweb
+              uses: deploy2nekoweb/deploy2nekoweb@v1
+              with:
+                nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
+                nekoweb-cookie: ${{ secrets.NEKOWEB_COOKIE }}
+                nekoweb-folder: 'site'
+                directory: 'public'</code></pre>
 
     <h3 class="orange">important information!</h3>
     <p>
@@ -111,6 +109,7 @@ jobs:
     </yescript>
 
     <script>
+      document.querySelector('#raw-code').style.display = 'none';
       function extractCookieHeader(curlCommand) {
         const cookieMatch = curlCommand.match(/-H\s+'cookie:\s*([^']+)'/i);
         return cookieMatch ? cookieMatch[1] : null;
