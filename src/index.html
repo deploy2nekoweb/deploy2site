@@ -38,7 +38,6 @@
     <yescript>
       <div id="code"></div>
     </yescript>
-<<<<<<< HEAD
     <pre><code id="raw-code">on: [push]
 
       jobs:
@@ -58,29 +57,6 @@
                 nekoweb-cookie: ${{ secrets.NEKOWEB_COOKIE }}
                 nekoweb-folder: 'site'
                 directory: 'public'</code></pre>
-=======
-    <noscript>
-      <pre><code id="raw-code">on: [push]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    name: deploy2nekoweb
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        
-      # your build step here
-        
-      - name: deploy2nekoweb
-        uses: deploy2nekoweb/deploy2nekoweb@v2
-        with:
-          nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
-          nekoweb-cookie: ${{ secrets.NEKOWEB_COOKIE }}
-          nekoweb-folder: 'site'
-          directory: 'public'</code></pre>
-    </noscript>
->>>>>>> 40c1a9f6049cfebfac6345cf5f031922de24321a
 
     <h3 class="orange">important information!</h3>
     <p>
