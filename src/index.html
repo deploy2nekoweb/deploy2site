@@ -111,7 +111,7 @@
     </yescript>
 
     <script>
-      document.querySelector('#raw-code').style.display = 'none';
+      document.querySelector('#raw-code').parentElement.style.display = 'none';
       function extractCookieHeader(curlCommand) {
         const cookieMatch = curlCommand.match(/-H\s+'cookie:\s*([^']+)'/i);
         return cookieMatch ? cookieMatch[1] : null;
