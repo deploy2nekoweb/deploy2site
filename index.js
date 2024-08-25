@@ -1,11 +1,13 @@
-import { writeFile } from "fs/promises";
-import { watch } from "chokidar";
-import * as sass from "sass";
-console.log("yes")
+import fs from 'fs/promises';
+import * as sass from 'sass';
 
-writeFile("./public/style.css", sass.compile("./style.scss").css);
+await fs.cp('src', 'dist', { recursive: true });
 
-watch("./style.scss").on('all', (event, path) => {
-  console.log(event, path);
-  writeFile("./public/style.css", sass.compile("./style.scss").css);
-});
+const files = await fs.readdir('dist', { recursive: true });
+for (const file of files) {
+  if (file.endsWith('.scss')) {
+    const result = sass.compile(`dist/${file}`);
+    await fs.writeFile(`dist/${file.replace(/\.scss$/, '.css')}`, result.css);
+    await fs.rm(`dist/${file}`);
+  }
+}

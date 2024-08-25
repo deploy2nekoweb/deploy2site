@@ -2,5 +2,8 @@
   "dependencies": {
     "chokidar": "^3.6.0",
     "sass": "^1.77.8"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.8"
   }
 }

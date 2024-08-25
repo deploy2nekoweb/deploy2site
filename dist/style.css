@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "Overused Grotesk";
+  src: url("../fonts/OverusedGrotesk-VF.woff2") format("woff2 supports variations"), url("../fonts/OverusedGrotesk-VF.woff2") format("woff2-variations");
+  font-weight: 300 900;
+}
+*,
+html,
+body {
+  box-sizing: border-box;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #181926;
+  font-family: "Inter";
+  color: #cad3f5;
+}
+
+body {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  background-color: #1e2030;
+  padding: 5px 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+@media (max-width: 740px) {
+  body {
+    max-width: 100%;
+    border-radius: 0;
+    margin-top: 0;
+  }
+}
+
+h1,
+h2 {
+  font-family: "Overused Grotesk";
+  color: #91d7e3;
+}
+
+pre, code {
+  font-family: JetBrains Mono, Menlo, monospace;
+  overflow: scroll;
+}
+
+p {
+  line-height: 1.5;
+}
+p code {
+  background-color: #181926;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+#code > pre {
+  padding: 10px !important;
+  border-radius: 5px;
+}
+
+hr {
+  border: 1px solid #6e738d;
+  margin: 20px 0;
+}
+
+a {
+  color: #8aadf4;
+  text-decoration: none;
+  border: 2px solid #8aadf4A0;
+  border-radius: 5px;
+  transition: border 0.2s, transform 0.2s;
+  padding: 0 4px;
+  display: inline-block;
+}
+a:hover {
+  border-color: #8aadf4;
+  transform: skewX(-5deg) scale(1.025);
+}
+
+label {
+  display: block;
+  font-style: italic;
+  color: #a5adcb;
+  font-size: 0.8em;
+}
+
+input[type=text], textarea {
+  display: block;
+  background: #24273a;
+  color: #cad3f5;
+  border: 1px solid #363a4f;
+}
+input[type=text]:focus, textarea:focus {
+  border-color: #8aadf4;
+  outline: none;
+}
+
+noscript pre {
+  background-color: #24273a;
+  color: #cad3f5;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.orange {
+  color: #f5a97f;
+}
