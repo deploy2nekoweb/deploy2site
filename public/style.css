@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Overused Grotesk";
+  src: url("/OverusedGrotesk.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/JetBrainsMono.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/Inter.otf") format("truetype");
+}
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #c6d0f5;
+  font-family: "Inter";
+  font-weight: 400;
+}
+
+html {
+  background-color: #232634;
+}
+
+body {
+  width: 700px;
+  margin: auto;
+  background-color: #303446;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+h1,
+h2 {
+  font-family: "Overused Grotesk";
+  color: #85c1dc;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+b {
+  font-weight: bold;
+  color: #8caaee;
+}
+
+pre {
+  margin: 20px 0;
+  border-radius: 8px;
+  background-color: #292c3c;
+  border: 1px solid #c6d0f5;
+}
+pre > code {
+  font-family: "JetBrains Mono";
+}
+
+hr {
+  border-color: #b5bfe2;
+  margin: 20px 0;
+}
