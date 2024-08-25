@@ -50,7 +50,7 @@ jobs:
       # your build step here
         
       - name: deploy2nekoweb
-        uses: deploy2nekoweb/deploy2nekoweb@main
+        uses: deploy2nekoweb/deploy2nekoweb@v1.0.0
         with:
           nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
           nekoweb-cookie: ${{ secrets.NEKOWEB_COOKIE }}
@@ -151,7 +151,7 @@ jobs:
       # your build step here
 
       - name: deploy2nekoweb
-        uses: deploy2nekoweb/deploy2nekoweb@main
+        uses: deploy2nekoweb/deploy2nekoweb@v1.0.0
         with:
           nekoweb-api-key: \${{ secrets.NEKOWEB_API_KEY }}
           nekoweb-cookie: \${{ secrets.NEKOWEB_COOKIE }}
