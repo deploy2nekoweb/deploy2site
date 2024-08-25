@@ -78,6 +78,11 @@ h2 {
   color: $sky;
 }
 
+code {
+  line-break: anywhere;
+  word-break: break-all;
+}
+
 pre, code {
   font-family: JetBrains Mono, Menlo, monospace;
   overflow: scroll;
