@@ -17,7 +17,7 @@ jobs:
           bun run index.js
 
       - name: deploy2nekoweb
-        uses: deploy2nekoweb/deploy2nekoweb@v2
+        uses: deploy2nekoweb/deploy2nekoweb@v3
         
         with:
           nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
